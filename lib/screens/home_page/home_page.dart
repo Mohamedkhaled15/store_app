@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../models/product_model.dart';
 import '../../services/get_all_product_service.dart';
 import '../../widgets/custom_card.dart';
+import '../../widgets/custome_app_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,25 +11,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                FontAwesomeIcons.cartPlus,
-                color: Colors.black,
-              ))
-        ],
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          'New Trend',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: buildAppBar(
+          title: 'New Trend',
+          bgColor: Colors.white,
+          icon: FontAwesomeIcons.cartPlus,
+          iconColor: Colors.black,onTap: (){}),
       body: Padding(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 65),
         child: FutureBuilder<List<ProductModel>>(
@@ -58,4 +45,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+
 }

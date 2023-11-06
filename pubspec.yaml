@@ -30,6 +30,8 @@ environment:
 dependencies:
   http:
   font_awesome_flutter: ^10.6.0
+  modal_progress_hud_nsn: ^0.4.0
+
   flutter:
     sdk: flutter
 
