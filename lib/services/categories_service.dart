@@ -5,7 +5,7 @@ class CategoriesService {
   Future<List<ProductModel>> getCategoriesProducts(
       {required String categoryName}) async {
    List<dynamic> data = await Api()
-        .get(url: 'https://fakestoreapi.com/products/category/$categoryName',);
+        .get(url: 'https://fakestoreapi.com/products/category/$categoryName'.trim(),);
 
    
 

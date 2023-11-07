@@ -82,6 +82,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                   onTap: () async {
                     isLoading = true;
                     setState(() {});
+
                     try {
                       await updateProduct(product);
                       print('success');
@@ -101,7 +102,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
   }
 
   Future<void> updateProduct(ProductModel product) async {
-    await UpdateProductService().UpdateProduct(
+    await UpdateProductService().updateProduct(
         id: product.id,
         title: productName == null ? product.title : productName!,
         price: price == null ? product.price.toString() : price!,
