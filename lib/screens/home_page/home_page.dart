@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               return GridView.builder(
                   itemCount: products.length,
                   clipBehavior: Clip.none,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio: 1.5,
                     crossAxisSpacing: 10,
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                     return CustomCard(product: products[index]);
                   });
             } else {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }

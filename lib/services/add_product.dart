@@ -1,14 +1,15 @@
 import 'package:store_api_app/helper/api.dart';
 import 'package:store_api_app/models/product_model.dart';
 
-class AddProduct{
+class AddProductService{
 
   Future<ProductModel> addProduct(
       {required String title,
         required String price,
         required String desc,
         required String image,
-        required String category}) async {
+        required String category
+      }) async {
     Map<String, dynamic> data = await
     Api().post(url: 'https://fakestoreapi.com/products', body: {
       'title': title,
