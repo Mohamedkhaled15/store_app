@@ -15,7 +15,8 @@ class HomePage extends StatelessWidget {
           title: 'New Trend',
           bgColor: Colors.white,
           icon: FontAwesomeIcons.cartPlus,
-          iconColor: Colors.black,onTap: (){}),
+          iconColor: Colors.black,
+          onTap: () {}),
       body: Padding(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 65),
         child: FutureBuilder<List<ProductModel>>(
@@ -45,6 +46,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-
 }
